@@ -1,6 +1,7 @@
 public void unmodcaucusclick(GButton source, GEvent event) { //_CODE_:unmodcaucus:576276:
   clearscreen();
   background(backgroundcolour);
+  modetype = "unmodcaucus";
   mode = new GLabel(this, width / 2, 50, 500, 200);
   mode.setFont(new Font("Arial", Font.PLAIN, 40));
   mode.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);

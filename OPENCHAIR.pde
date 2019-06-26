@@ -179,11 +179,9 @@ void draw(){
   else{
     if(timespoken.isRunning() == true){
         widthmultiplier = (width/2) * (spokentimertimerincrementor) / spokentimermax * 0.01;
-        if(widthmultiplier != 1){
-          println((widthmultiplier));
-          loadingbarinside.resize((int)widthmultiplier, loadingbar.height);
-          image(loadingbarinside, width / 4, 2 * height / 3);
-        }
+        println((widthmultiplier));
+        loadingbarinside.resize((int)widthmultiplier, loadingbar.height);
+        image(loadingbarinside, width / 4, 2 * height / 3);
     } 
     if(modcaucustime.isRunning() == true){
         try{ //<>//

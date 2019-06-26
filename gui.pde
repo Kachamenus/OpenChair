@@ -28,6 +28,7 @@ public void rollcallclick(GButton source, GEvent event) { //_CODE_:rollcall:6025
 
 public void motionsclick(GButton source, GEvent event) { //_CODE_:motions:500919:
   println("button2 - GButton >> GEvent." + event + " @ " + millis());
+  modetype = "motions";
   clearscreen();
   background(backgroundcolour);
       textSize(24);
@@ -37,6 +38,7 @@ public void motionsclick(GButton source, GEvent event) { //_CODE_:motions:500919
 
 public void speakerlistclick(GButton source, GEvent event) { //_CODE_:speakerlist:275163:
   println("button3 - GButton >> GEvent." + event + " @ " + millis());
+  modetype = "speakerlist";
   clearscreen();
   background(backgroundcolour);
       textSize(24);
@@ -47,6 +49,7 @@ public void speakerlistclick(GButton source, GEvent event) { //_CODE_:speakerlis
 public void singlespeakerclick(GButton source, GEvent event) { //_CODE_:singlespeaker:288825:
   clearscreen();
   background(backgroundcolour);
+  modetype = "singlespeaker";
   println("singlespeaker - GButton >> GEvent." + event + " @ " + millis());
       textSize(24);
       mode.setText("Single Speaker");
@@ -57,6 +60,7 @@ public void singlespeakerclick(GButton source, GEvent event) { //_CODE_:singlesp
 public void notesclick(GButton source, GEvent event) { //_CODE_:notes:768397:
   clearscreen();
   background(backgroundcolour);
+  modetype = "notes";
   println("notes - GButton >> GEvent." + event + " @ " + millis());
       textSize(24);
       mode.setText("Notes");
