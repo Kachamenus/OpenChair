@@ -142,7 +142,6 @@ GButton modcaucus;
 GButton unmodcaucus; 
 GButton singlespeaker; 
 GButton notes; 
-GImageButton imagespeaking; 
 GLabel positionspeaking; 
 GTextField speaktime; 
 GLabel mode; 

@@ -3,8 +3,6 @@ public void timespokenaction(GTimer source) { //_CODE_:timespoken:449875:
   positionarray.get(numspeak).setSpeaktime(positionarray.get(numspeak).getSpeaktime() + 1);
   println(spokentimer);
   spokentimer++;
-  spokentimerbar += "*";
-  spokentimerbarlabel.setText(spokentimer + "/" + spokentimermax + spokentimerbar);
   if(spokentimer >= spokentimermax){
     timespoken.stop();
     spokentimertimer.stop();
@@ -22,8 +20,6 @@ public void modcaucustimeaction(GTimer source) { //_CODE_:modcaucustime:275214:
     modcaucustime.stop();
     caucustimertimer.stop();
   }
-  caucustimerbar += "*";
-  caucustimerbarlabel.setText(caucustimer + "/" + caucustimermax + caucustimerbar);
 } //_CODE_:modcaucustime:275214:
 
 

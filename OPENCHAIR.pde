@@ -16,6 +16,7 @@ PImage loadingbar;
 PImage loadingbar2;
 PImage loadingbarinside;
 PImage loadingbarcaucus;
+PImage whitesquare;
 
 class positions {
     private int id;
@@ -182,15 +183,20 @@ void draw(){
         println((widthmultiplier));
         loadingbarinside.resize((int)widthmultiplier, loadingbar.height);
         image(loadingbarinside, width / 4, 2 * height / 3);
+        whitesquare = loadImage("images/white.png");
+        image(whitesquare, 0, height/2 + height / 5);
+        image(whitesquare, 0, height/2 + height / 6);
+        spokentimerbarlabel.setText(spokentimer + "/" + spokentimermax);
+
     } 
-    if(modcaucustime.isRunning() == true){
+    if(modcaucustime.isRunning() == true){ //FOR CAUCUSTIMER
         try{ //<>//
           widthmultiplier = (width / 4) + (width/2) * (caucustimertimerincrementor) / caucustimermax; //<>//
         } 
         catch (ArithmeticException ex){ //<>//
           setmaxcaucus.setText("");; //<>//
         }
-        
+        caucustimerbarlabel.setText(caucustimer + "/" + caucustimermax);
         //println(widthmultiplier);
         loadingbarcaucus.resize((int) (0.01 * widthmultiplier) + 1, loadingbar.height);
         image(loadingbarcaucus, width / 4, 2 * height / 3 + loadingbar.height);
